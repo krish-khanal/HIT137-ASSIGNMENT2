@@ -8,9 +8,9 @@ def load_and_process_data():
     Reads all CSV files in the '../data/temperatures/' folder.
     Transforms the data from wide format (one row per station) to long format (one row per station-month).
     """
-    all_files = glob.glob(os.path.join("temp", "*.csv"))
+    all_files = glob.glob(os.path.join("temperatures", "*.csv"))
     if not all_files:
-        raise FileNotFoundError("No CSV files found in the 'temp' directory.")
+        raise FileNotFoundError("No CSV files found in the 'temperatures' directory.")
 
     list_of_dfs = []
     for filename in all_files:
@@ -104,4 +104,5 @@ def analyze_temperatures():
         f.write("\nMost Variable:\n")
         for station, std_val in most_variable.items():
             f.write(f"Station {station}: StdDev {std_val}°C\n")
+
     print("Temperature stability analysis saved to '../output/temperature_stability_stations.txt'.")
