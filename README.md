@@ -1,6 +1,6 @@
 Contribution split
 
-Q1 → Merina
+Q1 → Merina Pokhrel
 
 Q2 → Girish Poudel
 
